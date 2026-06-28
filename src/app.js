@@ -4,8 +4,6 @@ const formEl = document.querySelector("#add-student-form");
 
 let currentId = null;
 
-
-// Функція для отримання всіх студентів
 btnEl.addEventListener("click", () => {
     getStudents().then(res => renderStudents(res));
 })
@@ -14,9 +12,6 @@ function getStudents() {
     return fetch("http://localhost:3000/students").then(res => res.json())
 }
 
-
-
-// Функція для відображення студентів у таблиці
 
 function renderStudents(students) {
     const item = students.map(({id, name, age, course, skills, email, isEnrolled}) => {
@@ -66,8 +61,6 @@ formEl.addEventListener("submit", (e) => {
         formEl.reset()
 })
 
-// Функція для додавання нового студента
-
 function addStudent(e) {
   const options = {
     method: "POST",
@@ -79,8 +72,6 @@ function addStudent(e) {
   return fetch("http://localhost:3000/students", options)
   .then(res => res.json());
 }
-
-// Функція для оновлення студента
 
 function updateStudent(id, data) {
     const options = {
@@ -94,9 +85,6 @@ function updateStudent(id, data) {
     .then(res => res.json())
 }
 
-
-
-// Функція для видалення студента
 
 function deleteStudent(id) {
     return fetch(`http://localhost:3000/students/${id}`, {

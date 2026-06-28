@@ -10,7 +10,7 @@
       "id": "1"
     },
     {
-      "name": "Dmytro Shevchenko",
+      "name": "r",
       "age": "14",
       "course": "Mobile App Development",
       "skills": "Java,Kotlin,Android Studio",
@@ -35,15 +35,6 @@
       "email": "mykola.bondarenko@example.com",
       "isEnrolled": true,
       "id": "5"
-    },
-    {
-      "name": "Лев Ал",
-      "age": "51",
-      "course": "mathe",
-      "skills": "ауауа,уауауа,уауауа",
-      "email": "lev2010alex@gmail.com",
-      "isEnrolled": true,
-      "id": "lFSfTTR"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
